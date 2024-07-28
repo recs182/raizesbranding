@@ -3,7 +3,7 @@ import {
   container,
   headerLinkLeft,
   headerLinkRight,
-  headerLogo,
+  headerLogo, headerLogoImage,
   headerMenu,
   headerMenuNav,
   highlightBranding,
@@ -31,8 +31,8 @@ import {
   sectionIntroduce,
   sectionIntroduceHeadline,
   sectionIntroducePeople,
-  sectionIntroducePeoplePhoto,
-  sectionIntroducePerson,
+  sectionIntroducePeoplePhoto, sectionIntroducePeoplePhotoImage,
+  sectionIntroducePerson, sectionIntroducePersonFlex,
   sectionIntroducePersonName,
   sectionNourish,
   sectionNourishCTA,
@@ -47,7 +47,7 @@ function App() {
         <nav className={headerMenuNav}>
           <div className={headerLinkLeft}></div>
           <div className={headerLogo}>
-            <img src="/raizes-logo.svg" />
+            <img className={headerLogoImage} src="/raizes-logo.svg" alt="Raízes" />
           </div>
           <a className={headerLinkRight} target="_blank" href="https://raizesbranding.substack.com">
             BLOG
@@ -130,9 +130,9 @@ function App() {
           <div className={sectionIntroduceHeadline}>OIE, DEIXE-NOS NOS APRESENTAR! 👋🏻</div>
           <div className={sectionIntroducePeople}>
             <div className={sectionIntroducePeoplePhoto}>
-              <img src="/partners.png" />
+              <img className={sectionIntroducePeoplePhotoImage} src="/partners.png" alt="Daniela & Carolina" />
             </div>
-            <div>
+            <div className={sectionIntroducePersonFlex}>
               <div className={sectionIntroducePerson}>
                 <div className={sectionIntroducePersonName}>DANIELA TREIN</div>
                 <div>

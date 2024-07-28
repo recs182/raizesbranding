@@ -47,10 +47,9 @@ export const headerLogo = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  selectors: {
-    '> img': { width: '180px' },
-  },
 });
+
+export const headerLogoImage = style({width: 180})
 
 export const headerLink = style([
   {
@@ -268,9 +267,6 @@ export const sectionIntroducePeople = style([
     alignItems: 'center',
     flexDirection: 'column',
     gap: '28px',
-    selectors: {
-      '> div': { flex: 1 },
-    },
   },
   responsiveStyle({
     desktop: {
@@ -281,10 +277,12 @@ export const sectionIntroducePeople = style([
 
 export const sectionIntroducePeoplePhoto = style({
   height: '550px',
-  selectors: {
-    '> img': { maxWidth: '390px', height: 'auto', borderRadius: '16px' },
-  },
+  flex: 1,
 });
+
+export const sectionIntroducePeoplePhotoImage = style({ width: '100%', maxWidth: '390px', height: 'auto', borderRadius: '16px' })
+
+export const sectionIntroducePersonFlex = style({flex: 1})
 
 export const sectionIntroducePerson = style([
   {
