@@ -102,14 +102,21 @@ export const sectionNourishSentence = style([
 export const sectionNourishCTA = style({
   padding: '8px 52px',
   width: 'fit-content',
+  display: 'block',
   color: 'white',
   fontWeight: 'bold',
   lineHeight: '16px',
   textAlign: 'center',
+  textDecoration: 'none',
   textTransform: 'uppercase',
   backgroundColor: '#5C4DEE',
   border: '1px solid #000000',
   borderRadius: '100%',
+  selectors: {
+    '&:hover': {
+      backgroundColor: '#3d2fd2',
+    }
+  }
 });
 
 export const landingCta = style([

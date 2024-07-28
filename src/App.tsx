@@ -100,10 +100,10 @@ function App() {
               <strong>Que tal começar a nutrir sua marca para um crescimento saudável e resultados reais?</strong>
               <br />
               <br />
-              <div className={sectionNourishCTA}>
+              <a className={sectionNourishCTA} href="mailto:contato@raizesbranding.com">
                 <div>vamos</div>
                 <div>conversar!</div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
