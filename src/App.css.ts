@@ -1,6 +1,6 @@
-import { style } from '@vanilla-extract/css';
+import { style, StyleRule } from '@vanilla-extract/css';
 
-const responsiveStyle = ({ desktop }) => ({
+const responsiveStyle = ({ desktop }: { desktop: StyleRule }) => ({
   '@media': {
     'screen and (min-width: 1268px)': desktop,
   },
@@ -47,7 +47,9 @@ export const headerLogo = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  '> img': { width: '180px' },
+  selectors: {
+    '> img': { width: '180px' },
+  },
 });
 
 export const headerLink = style([
@@ -266,7 +268,9 @@ export const sectionIntroducePeople = style([
     alignItems: 'center',
     flexDirection: 'column',
     gap: '28px',
-    '> div': { flex: 1 },
+    selectors: {
+      '> div': { flex: 1 },
+    },
   },
   responsiveStyle({
     desktop: {
@@ -275,7 +279,12 @@ export const sectionIntroducePeople = style([
   }),
 ]);
 
-export const sectionIntroducePeoplePhoto = style({ height: '550px', '> img': { maxWidth: '390px', height: 'auto', borderRadius: '16px' } });
+export const sectionIntroducePeoplePhoto = style({
+  height: '550px',
+  selectors: {
+    '> img': { maxWidth: '390px', height: 'auto', borderRadius: '16px' },
+  },
+});
 
 export const sectionIntroducePerson = style([
   {
@@ -424,16 +433,3 @@ export const sectionExpertiseServicesDescriptionBorder = style({
   height: '1px',
   backgroundColor: 'black',
 });
-
-const converted = {
-  '.text-underline': { fontWeight: 'bold', textDecoration: 'underline' },
-  'footer.footer': {
-    padding: '0 0 96px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center',
-    borderBottom: '32px solid #DDE26F',
-  },
-  '.footer-logo': { maxWidth: '180px' },
-};
